@@ -1,0 +1,14 @@
+C:\Users\gunelvn\source\repos\ConsoleProject1\ConsoleProject1\obj\Debug\netcoreapp3.1\NewConsoleProject.csproj.AssemblyReference.cache
+C:\Users\gunelvn\source\repos\ConsoleProject1\ConsoleProject1\obj\Debug\netcoreapp3.1\NewConsoleProject.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\gunelvn\source\repos\ConsoleProject1\ConsoleProject1\obj\Debug\netcoreapp3.1\NewConsoleProject.AssemblyInfoInputs.cache
+C:\Users\gunelvn\source\repos\ConsoleProject1\ConsoleProject1\obj\Debug\netcoreapp3.1\NewConsoleProject.AssemblyInfo.cs
+C:\Users\gunelvn\source\repos\ConsoleProject1\ConsoleProject1\obj\Debug\netcoreapp3.1\NewConsoleProject.csproj.CoreCompileInputs.cache
+C:\Users\gunelvn\source\repos\ConsoleProject1\ConsoleProject1\bin\Debug\netcoreapp3.1\NewConsoleProject.exe
+C:\Users\gunelvn\source\repos\ConsoleProject1\ConsoleProject1\bin\Debug\netcoreapp3.1\NewConsoleProject.deps.json
+C:\Users\gunelvn\source\repos\ConsoleProject1\ConsoleProject1\bin\Debug\netcoreapp3.1\NewConsoleProject.runtimeconfig.json
+C:\Users\gunelvn\source\repos\ConsoleProject1\ConsoleProject1\bin\Debug\netcoreapp3.1\NewConsoleProject.runtimeconfig.dev.json
+C:\Users\gunelvn\source\repos\ConsoleProject1\ConsoleProject1\bin\Debug\netcoreapp3.1\NewConsoleProject.dll
+C:\Users\gunelvn\source\repos\ConsoleProject1\ConsoleProject1\bin\Debug\netcoreapp3.1\NewConsoleProject.pdb
+C:\Users\gunelvn\source\repos\ConsoleProject1\ConsoleProject1\obj\Debug\netcoreapp3.1\NewConsoleProject.dll
+C:\Users\gunelvn\source\repos\ConsoleProject1\ConsoleProject1\obj\Debug\netcoreapp3.1\NewConsoleProject.pdb
+C:\Users\gunelvn\source\repos\ConsoleProject1\ConsoleProject1\obj\Debug\netcoreapp3.1\NewConsoleProject.genruntimeconfig.cache
