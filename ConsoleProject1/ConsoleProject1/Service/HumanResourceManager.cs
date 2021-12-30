@@ -102,7 +102,7 @@ namespace NewConsoleProject.Service
                 {
                     if (item2.DepartmentName.ToLower()==name.ToLower())
                     {
-                        Console.WriteLine(item2);
+                        Console.WriteLine(item);
                     }
                 }
             }
@@ -125,9 +125,6 @@ namespace NewConsoleProject.Service
             }
         }
 
-        public Department[] GetDepartments()
-        {
-            throw new NotImplementedException();
-        }
+        
     }
 }

@@ -19,9 +19,9 @@ namespace NewConsoleProject.Models
             {
                 Console.WriteLine("Daxil etdiyiniz position adi sehvdir");
             }
-
-            No += departmentName.Substring(0, 2) + Count;
             Count++;
+            No += departmentName.Substring(0, 2) + Count;
+            
             Salary = salary;
             Fullname = fullname;
             Position = position;
@@ -30,10 +30,10 @@ namespace NewConsoleProject.Models
         }
 
               public override string ToString()
-        {
-            return $"nomresi: {No}\nFullname: {Fullname}\n/*Position: {Position}*/\nsalary: {Salary}";
+              {
+               return $"nomresi: {No}\nFullname: {Fullname}\nPosition: {Position}\nsalary: {Salary}";
 
-        }
+              }
 
     
     }

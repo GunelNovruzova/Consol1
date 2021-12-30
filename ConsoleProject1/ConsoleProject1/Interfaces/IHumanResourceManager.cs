@@ -9,7 +9,7 @@ namespace NewConsoleProject.Interfaces
     {
         Department[] departments { get; }
         void AddDepartment(string name, int workerlimit, double salarylimit);
-        Department[] GetDepartments();
+        //Department[] GetDepartments();
         Employee[] GetEmployeesbyDepartment(string name);
         void EditDepartments(string name, string newname);
         void AddEmployee(string fullname, string position, double salary, string departmentName);

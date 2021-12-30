@@ -22,42 +22,37 @@ namespace NewConsoleProject.Models
 
             if (WorkerLimit <= 1)
             {
-
-
                 Console.WriteLine("Isci sayini duzgun daxil edin");
                 return;
-            }
-            if (Name.Length <= 2)
-            {
-                Console.WriteLine("bu adda melumat yoxdur");
             }
             if (SalaryLimit <= 250)
             {
                 Console.WriteLine("Maas 250-den asagi ola bilmez");
                 return;
             }
-            if (Employees.Length <= 0)
-            {
-                Console.WriteLine("Employees bos ola bilmez");
-                return;
-            }
         }
-        public double CalcAverageSalary(Department department)
+        public double CalcAverageSalary()
         {
             double TotalSalary = 0;
             int count = 0;
-            foreach (Employee item in department.Employees)
+            if (Employees.Length <= 0)
             {
-                TotalSalary += item.Salary;
-                count++;
+                return 0;
             }
-            return TotalSalary / count;
+            else
+            {
+                foreach (Employee item in Employees)
+                {
+                    TotalSalary += item.Salary;
+                    count++;
+                }
+                return TotalSalary / count;
+            }
+
         }
         public override string ToString()
         {
             return $"Department adi: {Name}\nIshci sayi: {WorkerLimit}\nMaash Limiti: {SalaryLimit}";
-
         }
-
     }
 }
