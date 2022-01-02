@@ -167,6 +167,7 @@ namespace ConsoleProject1
                 return;
             }
             Console.WriteLine("Elave etmek istediyiniz department adini daxil edin");
+            
         checkDN:
             string departmentname = Console.ReadLine();
             if (string.IsNullOrWhiteSpace(departmentname))
@@ -391,7 +392,7 @@ namespace ConsoleProject1
                 }
                 break;
             }
-
+            return;
         }
         static void RemoveEmployee(ref HumanResourceManager humanResourceManager)
         {
