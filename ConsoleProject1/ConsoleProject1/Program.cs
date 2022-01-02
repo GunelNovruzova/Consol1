@@ -15,14 +15,14 @@ namespace ConsoleProject1
             {
                 Console.WriteLine("-------------------------Human Resource Management---------------------------");
                 Console.WriteLine("Etmek istediyiniz emeliyyatin qarsisindaki nomreni daxil edin:");
-                Console.WriteLine(" 1.1 -Departamenet yaratmaq ");
-                Console.WriteLine(" 1.2 -Departameantlerin siyahisini gostermek ");
-                Console.WriteLine(" 1.3 - Departmanetde deyisiklik etmek ");
-                Console.WriteLine(" 2.1 - Iscilerin siyahisini gostermek ");
-                Console.WriteLine(" 2.2 - Departamentdeki iscilerin siyahisini gostermrek");
-                Console.WriteLine(" 2.3 - Isci elave etmek");
-                Console.WriteLine(" 2.4 - Isci uzerinde deyisiklik etmek");
-                Console.WriteLine(" 2.5 - Departamentden isci silinmesi");
+                Console.WriteLine(" 1 -Departamenet yaratmaq ");
+                Console.WriteLine(" 2 -Departameantlerin siyahisini gostermek ");
+                Console.WriteLine(" 3 - Departmanetde deyisiklik etmek ");
+                Console.WriteLine(" 4 - Iscilerin siyahisini gostermek ");
+                Console.WriteLine(" 5 - Departamentdeki iscilerin siyahisini gostermrek");
+                Console.WriteLine(" 6 - Isci elave etmek");
+                Console.WriteLine(" 7 - Isci uzerinde deyisiklik etmek");
+                Console.WriteLine(" 8 - Departamentden isci silinmesi");
                 Console.Write("Emeliyyatin nomresini daxil edin");
 
                 string choose = Console.ReadLine();
@@ -30,35 +30,35 @@ namespace ConsoleProject1
                 double.TryParse(choose, out chooseNum);
                 switch (chooseNum)
                 {
-                    case 1.1:
+                    case 1:
                         Console.Clear();
                         AddDepartment(ref humanResourceManager);
-                        break;
-                    case 1.2:
+                       break;
+                    case 2:
                         Console.Clear();
                         GetDepartments(ref humanResourceManager);
                         break;
-                    case 1.3:
+                    case 3:
                         Console.Clear();
                         EditDepartments(ref humanResourceManager);
                         break;
-                    case 2.1:
+                    case 4:
                         Console.Clear();
                         GetEmployee(ref humanResourceManager);
                         break;
-                    case 2.2:
+                    case 5:
                         Console.Clear();
                         GetEmployeesbyDepartment(ref humanResourceManager);
                         break;
-                    case 2.3:
+                    case 6:
                         Console.Clear();
                         AddEmployee(ref humanResourceManager);
                         break;
-                    case 2.4:
+                    case 7:
                         Console.Clear();
                         EditEmployee(ref humanResourceManager);
                         break;
-                    case 2.5:
+                    case 8:
                         Console.Clear();
                         RemoveEmployee(ref humanResourceManager);
                         break;
