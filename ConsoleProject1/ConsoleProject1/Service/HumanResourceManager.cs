@@ -24,26 +24,8 @@ namespace NewConsoleProject.Service
             Array.Resize(ref _departments, departments.Length + 1);
             _departments[_departments.Length - 1] = department1;
         }
-        public bool Checkname(string str)
-        {
-            if (!string.IsNullOrWhiteSpace(str))
-            {
-                if (Char.IsUpper(str[0]))
-                {
-                    foreach (var chr in str)
-                    {
-                        if (Char.IsLetter(chr) == false)
-                        {
-                            return false;
-                        }
-                    }
-                    return true;
-                }
-            }
-            return false;
-        }
-
-        public void AddEmployee(string fullname, string position, double salary, string departmentName)
+ 
+         public void AddEmployee(string fullname, string position, double salary, string departmentName)
         {
             Employee employee = new Employee(fullname,position,salary,departmentName);
 
@@ -51,9 +33,10 @@ namespace NewConsoleProject.Service
             {
                 if (employee.DepartmentName.ToLower() == item.Name.ToLower())
                 {
-                    //item.Employees = new Employee[0];
+                    
                     Array.Resize(ref item.Employees, item.Employees.Length + 1);
                     item.Employees[item.Employees.Length - 1] = employee;
+                    break;
                 }
                
             }
@@ -61,12 +44,12 @@ namespace NewConsoleProject.Service
 
         public void EditDepartments(string name, string newname)
         {
-            foreach (Department item in departments)
+            foreach (Department item in _departments)
             {
-                if (item.Name.ToLower() == name)
+                if (item.Name.ToLower() == name.ToLower())
                 {
                     item.Name = newname;
-                    Console.WriteLine("Departament adinda deyisiklik edildi.");
+                    Console.WriteLine("Deyisiklik qeyd edildi");
                     break;
                 }
             }
@@ -74,42 +57,24 @@ namespace NewConsoleProject.Service
 
         public void EditEmployee(string no, string fullname, string position, double salary)
         {
-            Employee employee = null;
-            foreach (Department item in _departments)
+             foreach (Department item in _departments)
             {
                 foreach (Employee item2 in item.Employees)
                 {
-                    if (item2.No == no)
+                    if (item2!=null && item2.No==no)
                     {
-                        employee = item2;
-                        break;
+                        item2.Fullname = fullname;
+                        item2.Position = position;
+                        item2.Salary = salary;
+
                     }
-                    employee.Fullname = fullname;
-                    employee.Position = position;
-                    employee.Salary = salary;
+                   
                 }
             }
 
         }
 
-        public Employee[] GetEmployeesbyDepartment(string name)
-
-        {
-            Employee[] arr = new Employee[0];
-            foreach (Department item in _departments)
-            {
-                foreach (Employee item2 in item.Employees)
-                {
-                    if (item2.DepartmentName.ToLower()==name.ToLower())
-                    {
-                        Console.WriteLine(item);
-                    }
-                }
-            }
-            return arr;
-        }    
-
-        public void RemoveEmployee(string no, string departmentName)
+       public void RemoveEmployee(string no, string departmentName)
         {
             foreach (Department item in _departments)
             {
@@ -125,6 +90,48 @@ namespace NewConsoleProject.Service
             }
         }
 
-        
+        public Department[] GetDepartments()
+        {
+            if (_departments.Length<0)
+            {
+                return null;
+            }
+            return _departments;
+        }
+
+        public void GetEmployees(string no, string fullname, string departmentname, double salary)
+        {
+            Employee[] employees = new Employee[0];
+
+            foreach (Department item in _departments)
+            {
+                foreach (Employee item2 in employees)
+                {
+                    if (item2 != null && item2.Fullname == fullname)
+                    {
+                        Array.Resize(ref employees, employees.Length + 1);
+                        employees[employees.Length - 1] = item2;
+                        item2.No = no;
+                        item2.DepartmentName = departmentname;
+                        item2.Salary = salary;
+                    }
+                }
+
+            }
+        }
+
+        public void GetEmployeesByDepatment(string departmentname)
+        {
+            foreach (Department item in _departments)
+            {
+                foreach (Employee item2 in item.Employees)
+                {
+                    if (item2 != null && item2.DepartmentName.ToLower() == departmentname.ToLower())
+                    {
+                        item2.DepartmentName = departmentname.ToLower();
+                    }
+                }
+            }
+        }
     }
 }

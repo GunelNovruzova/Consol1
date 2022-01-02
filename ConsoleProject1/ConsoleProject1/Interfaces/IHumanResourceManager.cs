@@ -7,15 +7,15 @@ namespace NewConsoleProject.Interfaces
 {
     interface IHumanResourceManager
     {
-        Department[] departments { get; }
+       public Department[] departments { get; }
         void AddDepartment(string name, int workerlimit, double salarylimit);
-        //Department[] GetDepartments();
-        Employee[] GetEmployeesbyDepartment(string name);
-        void EditDepartments(string name, string newname);
+        Department[] GetDepartments();
+        void GetEmployees(string no, string fullname, string departmentname, double salary);
+       void EditDepartments(string name, string newname);
         void AddEmployee(string fullname, string position, double salary, string departmentName);
         void RemoveEmployee(string no, string departmentName);
         void EditEmployee(string no, string fullname, string position, double salary);
-
+        void GetEmployeesByDepatment(string departmentname);
 
     }
 }

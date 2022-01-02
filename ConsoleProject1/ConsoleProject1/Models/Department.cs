@@ -25,11 +25,6 @@ namespace NewConsoleProject.Models
                 Console.WriteLine("Isci sayini duzgun daxil edin");
                 return;
             }
-            if (SalaryLimit <= 250)
-            {
-                Console.WriteLine("Maas 250-den asagi ola bilmez");
-                return;
-            }
         }
         public double CalcAverageSalary()
         {
@@ -43,12 +38,38 @@ namespace NewConsoleProject.Models
             {
                 foreach (Employee item in Employees)
                 {
+                    if(item!=null)
                     TotalSalary += item.Salary;
                     count++;
                 }
                 return TotalSalary / count;
             }
 
+        } 
+        public int EmpCounter()
+        {
+            int EmpCounter = 0;
+            foreach (Employee item in Employees)
+            {
+                if (item!=null)
+                {
+                    EmpCounter++;
+                }
+            }
+            return EmpCounter;
+        }
+        public double SalaryCounter()
+        {
+            double SalaryCounter = 0;
+            foreach (Employee item in Employees)
+            {
+                if (item!=null)
+                {
+                    SalaryCounter++;
+                }
+
+            }
+            return SalaryCounter;
         }
         public override string ToString()
         {
